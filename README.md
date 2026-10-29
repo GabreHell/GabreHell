@@ -1,12 +1,9 @@
 # Bem-vindo(a) ao meu perfil ⚡
 
- <div>
-   <a href="https://github.com/GabreHell">
-   <img alt="Estatísticas do GitHub de GabreHell" height="180em" src="https://github-readme-stats.vercel.app/api?username=GabreHell&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
-   <img alt="Linguagens mais usadas nos repositórios de GabreHell" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=GabreHell&layout=compact&langs_count=6&theme=tokyonight"/>
-
-   </a>
-</div>
+<p>
+  <img alt="Estatísticas públicas do GitHub de GabreHell" width="460" src="https://raw.githubusercontent.com/GabreHell/GabreHell/output/github-stats.svg">
+  <img alt="Linguagens nos repositórios públicos de GabreHell" width="460" src="https://raw.githubusercontent.com/GabreHell/GabreHell/output/top-languages.svg">
+</p>
 <div style="display: inline_block"><br>
   <img align="center" alt="Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
   <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
@@ -25,4 +22,7 @@
 
 </div>
 
-![Animação das contribuições](https://github.com/GabreHell/GabreHell/blob/output/github-contribution-grid-snake.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/GabreHell/GabreHell/output/github-contribution-grid-snake-dark.svg">
+  <img alt="Animação da cobrinha nas contribuições" src="https://raw.githubusercontent.com/GabreHell/GabreHell/output/github-contribution-grid-snake.svg">
+</picture>
