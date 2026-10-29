@@ -1,25 +1,70 @@
-name: Generate Datas
+name: Atualizar imagens do perfil
 
 on:
-  schedule: # execute every 12 hours
-    - cron: "* */12 * * *"
+  schedule:
+    # Duas vezes por dia, às 00:17 e 12:17 UTC.
+    - cron: "17 */12 * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/cobrinha.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-images
+  cancel-in-progress: false
 
 jobs:
   build:
-    name: Jobs to update datas
+    name: Atualizar cobrinha e estatísticas
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      # Snake Animation
-      - uses: Platane/snk@master
-        id: snake-gif
+      - name: Gerar cobrinha
+        uses: Platane/snk/svg-only@v3
         with:
-          github_user_name: GabreHell
-          svg_out_path: dist/github-contribution-grid-snake.svg
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      - uses: crazy-max/ghaction-github-pages@v2.1.3
+      - name: Gerar cartões com dados públicos
+        uses: actions/github-script@v8
+        with:
+          retries: 3
+          script: |
+            const fs = require('fs');
+            const owner = context.repo.owner;
+            const repos = (await github.paginate(github.rest.repos.listForUser, {username: owner, per_page: 100})).filter(r => !r.private && !r.fork);
+            const {data: user} = await github.rest.users.getByUsername({username: owner});
+            const languages = {};
+            for (const repo of repos) {
+              const {data} = await github.rest.repos.listLanguages({owner, repo: repo.name});
+              for (const [name, bytes] of Object.entries(data)) languages[name] = (languages[name] || 0) + bytes;
+            }
+            const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
+            const svg = (title, rows, footer) => '<svg xmlns="http://www.w3.org/2000/svg" width="460" height="220" viewBox="0 0 460 220" role="img"><title>'+esc(title)+'</title><rect x="1" y="1" width="458" height="218" rx="12" fill="#1a1b27" stroke="#414868"/><g font-family="Segoe UI,Arial,sans-serif"><text x="24" y="36" font-size="20" font-weight="600" fill="#7aa2f7">'+esc(title)+'</text>'+rows.map((r,i)=>'<text x="24" y="'+(68+i*23)+'" font-size="14" fill="#a9b1d6">'+esc(r[0])+'</text><text x="432" y="'+(68+i*23)+'" text-anchor="end" font-size="14" fill="#c0caf5">'+esc(r[1])+'</text>').join('')+'<text x="24" y="204" font-size="10" fill="#9aa5ce">'+esc(footer)+'</text></g></svg>';
+            const date = new Date().toISOString().slice(0,10);
+            fs.mkdirSync('dist', {recursive:true});
+            fs.writeFileSync('dist/github-stats.svg', svg('GitHub · '+owner, [
+              ['Repositórios públicos próprios', repos.length],
+              ['Estrelas nesses repositórios', repos.reduce((n,r)=>n+r.stargazers_count,0)],
+              ['Forks desses repositórios', repos.reduce((n,r)=>n+r.forks_count,0)],
+              ['Seguidores', user.followers]
+            ], 'Dados públicos · atualizado em '+date));
+            const total = Object.values(languages).reduce((a,b)=>a+b,0);
+            const rows = Object.entries(languages).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([n,b])=>[n,(b/total*100).toFixed(1)+'%']);
+            fs.writeFileSync('dist/top-languages.svg', svg('Linguagens nos repositórios', rows.length?rows:[['Sem código contabilizado','—']], 'Por bytes de código · exclui forks · '+date));
+
+      - name: Publicar imagens
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
+          keep_history: true
+          allow_empty_commit: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
