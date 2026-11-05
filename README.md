@@ -1,4 +1,4 @@
-<a href="https://gabrestudio.com"><img src="assets/gabre-header-qr.svg" width="1200" alt="Gabriel Valerio Alves — Gabre Studio. Brand and product design, software development and AI." /></a>
+<a href="https://gabrestudio.com"><img src="https://raw.githubusercontent.com/GabreHell/GabreHell/ad7e8df09fc592897d759da9f3b61e51bce93a50/assets/gabre-header-qr.svg" width="1200" alt="Gabriel Valerio Alves — Gabre Studio. Brand and product design, software development and AI." /></a>
 
 I’m **Gabriel Valerio Alves**, a Brand & UI/UX Designer building digital products through **Gabre Studio**. My work connects visual identity, user experience and software development, with hands-on projects in design tools, learning and AI-related opportunities.
 
