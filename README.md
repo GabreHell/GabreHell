@@ -1,4 +1,4 @@
-<a href="https://gabrestudio.com"><img src="assets/profile-header.svg" width="1200" alt="Gabriel Valerio Alves — Gabre Studio. Brand and product design, software development and AI." /></a>
+<a href="https://gabrestudio.com"><img src="assets/profile-header.svg?v=2" width="1200" alt="Gabriel Valerio Alves — Gabre Studio. Brand and product design, software development and AI." /></a>
 
 I’m **Gabriel Valerio Alves**, a Brand & UI/UX Designer building digital products through **Gabre Studio**. My work connects visual identity, user experience and software development, with hands-on projects in design tools, learning and AI-related opportunities.
 
@@ -42,6 +42,6 @@ I start with the problem and the people using the product, connect the brand to 
 
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/GabreHell/GabreHell/output/github-contribution-grid-snake-dark.svg">
-  <img width="100%" alt="Animated contribution snake in Gabre Studio blue" src="https://raw.githubusercontent.com/GabreHell/GabreHell/output/github-contribution-grid-snake.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/GabreHell/GabreHell/output/github-contribution-grid-snake-dark.svg?v=blue">
+  <img width="100%" alt="Animated contribution snake in Gabre Studio blue" src="https://raw.githubusercontent.com/GabreHell/GabreHell/output/github-contribution-grid-snake.svg?v=blue">
 </picture>
