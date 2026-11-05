@@ -1,4 +1,4 @@
-<a href="https://gabrestudio.com"><img src="assets/profile-header.svg?v=2" width="1200" alt="Gabriel Valerio Alves — Gabre Studio. Brand and product design, software development and AI." /></a>
+<a href="https://gabrestudio.com"><img src="assets/gabre-header-qr.svg" width="1200" alt="Gabriel Valerio Alves — Gabre Studio. Brand and product design, software development and AI." /></a>
 
 I’m **Gabriel Valerio Alves**, a Brand & UI/UX Designer building digital products through **Gabre Studio**. My work connects visual identity, user experience and software development, with hands-on projects in design tools, learning and AI-related opportunities.
 
@@ -26,7 +26,14 @@ I’m **Gabriel Valerio Alves**, a Brand & UI/UX Designer building digital produ
 
 ## My toolkit
 
-<a href="https://www.gabrestudio.com/#sobre"><img src="assets/toolkit.svg" width="1200" alt="My toolkit: Photoshop, Illustrator, InDesign, Sketch, Canva, Figma, Notion, Magnific, Gemini, ChatGPT, Grok, Claude, NotebookLM, HTML5, CSS, JavaScript, VS Code, Framer, Miro, After Effects." /></a>
+<a href="https://www.gabrestudio.com/#sobre"><img src="assets/toolkit-animated.svg" width="1200" alt="My toolkit: Photoshop, Illustrator, InDesign, Sketch, Canva, Figma, Notion, Magnific, Gemini, ChatGPT, Grok, Claude, NotebookLM, HTML5, CSS, JavaScript, VS Code, Framer, Miro, After Effects." /></a>
+
+<details>
+<summary>View all 20 tools</summary>
+
+Photoshop · Illustrator · InDesign · Sketch · Canva · Figma · Notion · Magnific · Gemini · ChatGPT · Grok · Claude · NotebookLM · HTML5 · CSS · JavaScript · VS Code · Framer · Miro · After Effects
+
+</details>
 
 ## How I work
 
