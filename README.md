@@ -24,6 +24,10 @@ I’m **Gabriel Valerio Alves**, a Brand & UI/UX Designer building digital produ
 `Visual Identity` · `UI Design` · `JavaScript` · `Node.js`  
 **Status:** work in progress. The catalog uses collected snapshots; automated data sources remain to be validated. Referral links are disclosed in the interface.
 
+## My toolkit
+
+<a href="https://www.gabrestudio.com/#sobre"><img src="assets/toolkit.svg" width="1200" alt="My toolkit: Photoshop, Illustrator, InDesign, Sketch, Canva, Figma, Notion, Magnific, Gemini, ChatGPT, Grok, Claude, NotebookLM, HTML5, CSS, JavaScript, VS Code, Framer, Miro, After Effects." /></a>
+
 ## How I work
 
 I start with the problem and the people using the product, connect the brand to the interface, and carry those decisions into implementation. These repositories document both the working features and the limitations still being addressed.
@@ -35,3 +39,9 @@ I start with the problem and the people using the product, connect the brand to 
 ---
 
 [Explore my work at Gabre Studio →](https://gabrestudio.com)
+
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/GabreHell/GabreHell/output/github-contribution-grid-snake-dark.svg">
+  <img width="100%" alt="Animated contribution snake in Gabre Studio blue" src="https://raw.githubusercontent.com/GabreHell/GabreHell/output/github-contribution-grid-snake.svg">
+</picture>
